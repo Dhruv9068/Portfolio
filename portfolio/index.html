@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My HTML Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+    
+  <nav class="fixed-navbar">
+    <ul class="nav-list">
+        <h1 class="logo">Dhruv</h1>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#social">Social</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+  <div id ="home" class="first">
+      <div class="heading">Hello Everyone ! <br> It's Dhruv</div>
+  </div>
+
+    <div class="slider">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img class="slideimage" src="imagesnew/dhruv1.png" style="width:100%">
+              
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img class="slideimage" src="imagesnew/dhruv13.jpeg" style="width:100%">
+              
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img class="slideimage" src="imagesnew/dhruv2.png" style="width:100%">
+              
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+          <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+        
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+        
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+        
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {
+                    slideIndex = 1;
+                }
+                if (n < 1) {
+                    slideIndex = slides.length;
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+
+            
+        </script>
+        
+       
+
+<!-- Make profile pictures clickable with curve effect and padding -->
+<div id="social" class="firstSection">
+    <div class="socialheading">Let's Connect!</div>
+    
+    <!-- Make profile pictures clickable with curve effect and padding -->
+    <div class="profile-container">
+        <a href="https://www.instagram.com/the._sky._.lover/" target="_blank" class="social-link">
+            <div class="profile-link">
+                <span class="username">the._sky._.lover</span>
+                <img src="imagesnew/dhruv5.png" alt="Instagram Profile Picture" class="profile-pic" id="insta-profile">
+                <div class="overlay"></div>
+            </div>
+            <img src="imagesnew/instalogo.jpeg" alt="Instagram" class="social-icon" id="insta-logo">
+           
+        </a>
+        <a href="https://www.linkedin.com/in/dhruv-chaturvedi-4971b0192" target="_blank" class="social-link">
+            <div class="profile-link">
+                <span class="username">Dhruv Chaturvedi</span>
+                <img src="imagesnew/dhruv1.png" alt="LinkedIn Profile Picture" class="profile-pic" id="linkedin-profile">
+                <div class="overlay"></div>
+            </div>
+            <img src="imagesnew/linkedinlogo.png" alt="LinkedIn" class="social-icon" id="linkedin-logo">
+            
+        </a>
+    </div>
+</div>
+
+<section id="about" class="SectionRight">
+    <div class="box-main2">
+        <div class="Half1">
+            <div class="text-container">
+                <h2 style="font-size:40px;">About Me</h2>
+                <p>
+                    Hello there! I'm a passionate and curious individual currently navigating the exciting world of
+                    technology. As a third-year computer science engineering student pursuing my BTech, I am dedicated
+                    to honing my skills in both academics and the ever-evolving field of front-end development.
+                </p>
+                <p>
+                    My journey in the realm of code began with a quest for creativity and problem-solving. Eager to
+                    transform ideas into engaging user experiences, I explore the artistry of web development. Being
+                    in my third year has not only deepened my understanding of computer science but also fueled my
+                    enthusiasm for creating seamless and visually appealing websites.
+                </p>
+                <div class="profession-tags">
+                    <div class="tag">Student</div>
+                    <div class="tag">Software Engineer</div>
+                    <div class="tag">Front-end Developer</div>
+                    <div class="tag">DSA Enthusiast</div>
+                    <div class="tag">Java Developer</div>
+                    <div class="tag">Data Science Enthusiast</div>
+                    <!-- Add more tags as needed -->
+                </div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="imagesnew/dhruv2.png" alt="Your Photo" width="300px">
+        </div>
+    </div>
+</section>
+
+<section id="gallery" class="image-grid">
+    <div class="cf"></div>
+    <div class="grid-item">
+        <img src="imagesnew/dhruv1.png" alt="Image 1">
+    </div>
+    <div class="grid-item">
+        <img src="imagesnew/dhruv2.png" alt="Image 1">
+    </div>
+    <div class="grid-item">
+        <img src="imagesnew/dhruv3.png" alt="Image 1">
+    </div>
+    <div class="grid-item">
+        <img src="imagesnew/dhruv11.png" alt="Image 1">
+    </div>
+</section>
+        
+       
+        
+    <section id ="contact" class="CFS">
+      <div class="cf"><h1>Contact Form</h1></div>
+        <div class="container">
+            <form action="contact.php" method="POST">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="australia">India</option>
+                    <!-- Add other countries as needed -->
+                </select>
+
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </section>
+
+
+    
+</body>
+</html>
